@@ -109,5 +109,26 @@ jwt.expiration=3600000               # Access Token Validity (1 hour)
 jwt.refreshExpiration=604800000      # Refresh Token Validity (7 days)
 
 ```
+---
 
 ### 📚 API Documentation
+
+# 📄 Swagger UI
+```
+🔗 http://localhost:8080/swagger-ui.html
+```
+
+# 📬 Postman Collection
+
+```
+
+| Method | Endpoint       | Description               |
+|--------|----------------|---------------------------|
+| POST   | /register      | Register new user         |
+| POST   | /login         | Login and get tokens      |
+| POST   | /refresh       | Get new access token      |
+| GET    | /allusers      | Get all users (auth)      |
+
+```
+
+
