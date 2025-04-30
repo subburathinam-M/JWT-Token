@@ -88,7 +88,7 @@ Postman (for API testing)
    mvn spring-boot:run
    ```
 
-5.  **Access the application**
+4.  **Access the application**
    ```
    http://localhost:8080
  ```
