@@ -69,4 +69,17 @@ MongoDB (running locally or connection string)
 
 Postman (for API testing)
 
+---
+
+### 🏗 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/jwt-auth.git
+cd jwt-auth
+
+2. **Build the project**
+
+
+
 
