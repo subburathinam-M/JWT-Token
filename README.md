@@ -76,9 +76,13 @@ Postman (for API testing)
 1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/jwt-auth.git
-cd jwt-auth
+   cd jwt-auth
+   ```
 
 2. **Build the project**
+   ```
+      mvn clean install
+      ```
 
 
 
