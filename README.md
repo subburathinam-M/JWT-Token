@@ -33,7 +33,7 @@ A secure and robust authentication system built using **Java**, **Spring Boot**,
 
 ## 📂 Project Structure
 
-'''
+```
 jwt-auth/
 ├── src/
 │   ├── main/
@@ -53,4 +53,4 @@ jwt-auth/
 ├── .gitignore
 ├── pom.xml
 └── README.md
-'''
+```
