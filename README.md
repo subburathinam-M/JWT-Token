@@ -91,8 +91,26 @@ Postman (for API testing)
 5.  **Access the application**
    ```
 http://localhost:8080
+```
+---
+
+### ⚙️ Configuration
+
+Edit src/main/resources/application.properties:
 
 ```
+
+# MongoDB Configuration
+spring.data.mongodb.uri=mongodb://localhost:27017/jwt
+
+# JWT Secret & Expiration
+jwt.secret=YourStrongSecretKeyHere
+jwt.expiration=3600000               # Access Token Validity (1 hour)
+jwt.refreshExpiration=604800000      # Refresh Token Validity (7 days)
+
+```
+
+
 
 
 
