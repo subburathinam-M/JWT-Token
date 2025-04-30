@@ -93,6 +93,11 @@ Postman (for API testing)
    http://localhost:8080
  ```
 
+3. **Run the application**
+   ```
+   mvn spring-boot:run
+   ```
+
  
  ---
 
