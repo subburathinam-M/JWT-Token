@@ -84,10 +84,15 @@ Postman (for API testing)
       mvn clean install
       ```
 3. **Run the application**
-   ``` mvn spring-boot:run ```
+   ```
+   mvn spring-boot:run
+   ```
 
-4.  **Access the application**
-   ```  http://localhost:8080 ```
+5.  **Access the application**
+   ```
+http://localhost:8080
+
+```
 
 
 
