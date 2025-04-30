@@ -89,11 +89,12 @@ Postman (for API testing)
    ```
 
 5.  **Access the application**
-  ```
+   ```
+ http://localhost:8080
+ ```
 
-     http://localhost:8080
-  ```
----
+ 
+ ---
 
 ### ⚙️ Configuration
 
