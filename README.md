@@ -54,3 +54,19 @@ jwt-auth/
 ├── pom.xml
 └── README.md
 ```
+
+---
+
+## 🚀 Getting Started
+
+### ✅ Prerequisites
+
+Java 17
+
+Maven 3.8+
+
+MongoDB (running locally or connection string)
+
+Postman (for API testing)
+
+
