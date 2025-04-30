@@ -131,4 +131,120 @@ jwt.refreshExpiration=604800000      # Refresh Token Validity (7 days)
 
 ```
 
+---
+
+# 🛠️ Example Requests
+
+1. Register a User
+
+```
+
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "email": "admin@example.com",
+  "password": "admin123",
+  "role": "ADMIN"
+}
+
+```
+
+2. Login and Get Tokens
+
+```
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+```
+
+Response:
+
+```
+
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+
+```
+
+3. Access Protected Route
+
+```
+GET http://localhost:8080/allusers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+---
+
+# 🧑‍💻 Development
+
+Build and Run Tests
+
+```
+mvn clean package
+```
+Code Formatting
+
+```
+mvn spotless:apply
+```
+Dependency Tree
+```
+mvn dependency:tree
+```
+---
+
+# 🤝 Contributing
+
+1.Fork the project
+
+2.Create your feature branch (git checkout -b feature/AmazingFeature)
+
+3.Commit your changes (git commit -m 'Add some AmazingFeature')
+
+4.Push to the branch (git push origin feature/AmazingFeature)
+
+5.Open a Pull Request
+
+---
+
+# 📜 License
+
+Distributed under the MIT License. See LICENSE for more information.
+
+---
+# 📧 Contact
+
+Subburathinam M – subburathinam.work@gmail.com
+🔗 GitHub Profile
+
+---
+
+# 🙏 Acknowledgments
+Spring Boot
+
+MongoDB
+
+Swagger
+
+JJWT
+
+---
+
+# Made with ❤️ in Java ☕
+
+
+
+
+
+
+
 
