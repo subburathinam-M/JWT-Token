@@ -110,8 +110,4 @@ jwt.refreshExpiration=604800000      # Refresh Token Validity (7 days)
 
 ```
 
-
-
-
-
-
+### 📚 API Documentation
