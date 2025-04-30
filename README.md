@@ -89,9 +89,9 @@ Postman (for API testing)
    ```
 
 5.  **Access the application**
-   ```
-http://localhost:8080
-```
+  ```
+  http://localhost:8080
+  ```
 ---
 
 ### ⚙️ Configuration
@@ -231,13 +231,14 @@ Subburathinam M – subburathinam720@gmail.com
 ---
 
 # 🙏 Acknowledgments
-Spring Boot
+
+Spring Security
+
+JJWT Library
 
 MongoDB
 
 Swagger
-
-JJWT
 
 ---
 
