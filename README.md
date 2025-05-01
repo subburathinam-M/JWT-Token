@@ -235,7 +235,21 @@ sequenceDiagram
     🖥️ Server-->>-👤 Client: Protected data
 ```
 
+### 🔄 3. Refresh Token Flow (When Access Token Expires)
+
 ![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow.png)
+
+
+### 📈 3.1 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    👤 Client->>🖥️ Server: POST /refresh {refreshToken}
+    🖥️ Server->>🖥️ Server: Validate refreshToken
+    🖥️ Server->>🖥️ Server: Generate new tokens
+    🖥️ Server-->>👤 Client: {newAccessToken, newRefreshToken}
+```
+
 
 
 
