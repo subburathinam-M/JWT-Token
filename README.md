@@ -207,7 +207,7 @@ mvn dependency:tree
 
 # flow diagram 
 
-![Project Architecture](images/Login Flow.png)
+![Project Architecture](images/LoginFlow.png)
 
 # 🤝 Contributing
 
