@@ -222,6 +222,12 @@ sequenceDiagram
     Server->>Client: New tokens (with original role)
 ```
 
+### 🔐2. Access Token Usage Flow
+
+![Access Token Usage](images/AccessTokenUsage.png)
+
+
+
 
 
 
