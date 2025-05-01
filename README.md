@@ -194,15 +194,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ![Login Flow](images/LoginFlow.png)
 
-### 📈 2. Sequence Diagram
+### 📈 1.1 Sequence Diagram
 
 ```mermaid
- sequenceDiagram
-    Client->>+Server: POST /login {email, password}
-    Server->>+DB: Verify credentials
-    DB-->>-Server: User data
-    Server->>Server: Generate tokens
-    Server-->>-Client: {accessToken, refreshToken}
+sequenceDiagram
+    👤 Client->>+🖥️ Server: POST /login {email, password}
+    🖥️ Server->>+🗄️ DB: Verify credentials
+    🗄️ DB-->>-🖥️ Server: User data
+    🖥️ Server->>🖥️ Server: Generate tokens
+    🖥️ Server-->>-👤 Client: {accessToken, refreshToken}
 ```
 
 
@@ -221,6 +221,21 @@ sequenceDiagram
     Server->>Server: Verify token + extract role
     Server->>Client: New tokens (with original role)
 ```
+
+### 🔐2. Access Token Usage Flow
+
+![Access Token Usage](images/AccessTokenUsage.png)
+
+### 📈 2.1 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    👤 Client->>+🖥️ Server: GET /protected (🔐 Bearer accessToken)
+    🖥️ Server->>🖥️ Server: Validate JWT
+    🖥️ Server-->>-👤 Client: Protected data
+```
+
+
 
 
 
