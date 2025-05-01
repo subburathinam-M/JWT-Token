@@ -235,7 +235,41 @@ sequenceDiagram
     🖥️ Server-->>-👤 Client: Protected data
 ```
 
-![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow(when accessToken expires).png)
+### 🔄 3. Refresh Token Flow (When Access Token Expires)
+
+![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow.png)
+
+
+### 📈 3.1 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    👤 Client->>🖥️ Server: POST /refresh {refreshToken}
+    🖥️ Server->>🖥️ Server: Validate refreshToken
+    🖥️ Server->>🖥️ Server: Generate new tokens
+    🖥️ Server-->>👤 Client: {newAccessToken, newRefreshToken}
+```
+
+
+### 🔄 How Refresh Tokens Bypass the Filter (just for explanation how to work in project structure code level)
+
+```mermaid
+sequenceDiagram
+    participant 👤 Client
+    participant 🔒 Filter
+    participant 🛠️ Controller
+
+    Note over Client: Normal Access Token Flow
+    👤 Client->>🔒 Filter: GET /api/secure (Bearer <access_token>)
+    🔒 Filter->>🔒 Filter: Validates token
+    🔒 Filter->>🛠️ Controller: Proceeds if valid
+
+    Note over Client: Refresh Token Flow
+    👤 Client->>🛠️ Controller: POST /refresh {refreshToken}
+    🛠️ Controller->>AuthService: refreshToken(refreshToken)
+    AuthService-->>🛠️ Controller: New tokens
+    🛠️ Controller-->>👤 Client: Returns new tokens
+```
 
 
 
