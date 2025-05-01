@@ -187,6 +187,46 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 ---
 
+
+## ✨ Full Authentication Flow diagram 
+
+### 🔑 1. Login Flow
+
+![Login Flow](images/LoginFlow.png)
+
+### 📈 2. Sequence Diagram
+
+```mermaid
+ sequenceDiagram
+    Client->>+Server: POST /login {email, password}
+    Server->>+DB: Verify credentials
+    DB-->>-Server: User data
+    Server->>Server: Generate tokens
+    Server-->>-Client: {accessToken, refreshToken}
+```
+
+
+### 🔐 Modified Flow with Role
+
+```mermaid
+sequenceDiagram
+    Client->>Server: POST /login (email, password)
+    Server->>DB: Verify credentials
+    DB->>Server: User data (email, role)
+    Server->>Server: Generate tokens (with role)
+    Server->>Client: {accessToken, refreshToken} (both contain role)
+
+    Note over Client: Access token expires
+    Client->>Server: POST /refresh (refreshToken)
+    Server->>Server: Verify token + extract role
+    Server->>Client: New tokens (with original role)
+```
+
+
+
+
+---
+
 # 🧑‍💻 Development
 
 Build and Run Tests
@@ -205,9 +245,6 @@ mvn dependency:tree
 ```
 ---
 
-# flow diagram 
-
-![Project Architecture](images/LoginFlow.png)
 
 # 🤝 Contributing
 
