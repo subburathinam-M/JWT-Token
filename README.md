@@ -210,16 +210,16 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    Client->>Server: POST /login (email, password)
-    Server->>DB: Verify credentials
-    DB->>Server: User data (email, role)
-    Server->>Server: Generate tokens (with role)
-    Server->>Client: {accessToken, refreshToken} (both contain role)
+    👤 Client->>🖥️ Server: POST /login (email, password)
+    🖥️ Server->>🗄️ DB: Verify credentials
+    🗄️ DB->>🖥️ Server: User data (email, role)
+    🖥️ Server->>🖥️ Server: Generate tokens (with role)
+    🖥️ Server->>👤 Client: {accessToken, refreshToken} (both contain role)
 
-    Note over Client: Access token expires
-    Client->>Server: POST /refresh (refreshToken)
-    Server->>Server: Verify token + extract role
-    Server->>Client: New tokens (with original role)
+    Note over 👤 Client: Access token expires
+    👤 Client->>🖥️ Server: POST /refresh (refreshToken)
+    🖥️ Server->>🖥️ Server: Verify token + extract role
+    🖥️ Server->>👤 Client: New tokens (with original role)
 ```
 
 ### 🔐2. Access Token Usage Flow
@@ -234,6 +234,8 @@ sequenceDiagram
     🖥️ Server->>🖥️ Server: Validate JWT
     🖥️ Server-->>-👤 Client: Protected data
 ```
+
+![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow(when accessToken expires).png)
 
 
 
