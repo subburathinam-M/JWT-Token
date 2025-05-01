@@ -187,6 +187,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 ---
 
+### flow diagram 
+
+# Full Authentication Flow
+
+1. Login Flow
+
+![Project Architecture](images/LoginFlow.png)
+
+```
+# sequenceDiagram
+    Client->>+Server: POST /login {email, password}
+    Server->>+DB: Verify credentials
+    DB-->>-Server: User data
+    Server->>Server: Generate tokens
+    Server-->>-Client: {accessToken, refreshToken}
+```
+
+
+
+
+---
+
 # 🧑‍💻 Development
 
 Build and Run Tests
@@ -205,9 +227,6 @@ mvn dependency:tree
 ```
 ---
 
-# flow diagram 
-
-![Project Architecture](images/LoginFlow.png)
 
 # 🤝 Contributing
 
