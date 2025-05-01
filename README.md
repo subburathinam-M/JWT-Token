@@ -251,6 +251,26 @@ sequenceDiagram
 ```
 
 
+### 🔄 How Refresh Tokens Bypass the Filter (just for explanation how to work in project structure code level)
+
+```mermaid
+sequenceDiagram
+    participant 👤 Client
+    participant 🔒 Filter
+    participant 🛠️ Controller
+
+    Note over Client: Normal Access Token Flow
+    👤 Client->>🔒 Filter: GET /api/secure (Bearer <access_token>)
+    🔒 Filter->>🔒 Filter: Validates token
+    🔒 Filter->>🛠️ Controller: Proceeds if valid
+
+    Note over Client: Refresh Token Flow
+    👤 Client->>🛠️ Controller: POST /refresh {refreshToken}
+    🛠️ Controller->>AuthService: refreshToken(refreshToken)
+    AuthService-->>🛠️ Controller: New tokens
+    🛠️ Controller-->>👤 Client: Returns new tokens
+```
+
 
 
 
