@@ -230,9 +230,9 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    👨‍💻 Client->>+🛡️ Server: GET /protected (🔑 Bearer accessToken)
-    🛡️ Server->>🧠 Server: 🧾 Validate JWT
-    🛡️ Server-->>-👨‍💻 Client: 📦 Protected data
+    👤 Client->>+🖥️ Server: GET /protected (🔐 Bearer accessToken)
+    🖥️ Server->>🖥️ Server: Validate JWT
+    🖥️ Server-->>-👤 Client: Protected data
 ```
 
 
