@@ -187,16 +187,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 ---
 
-### flow diagram 
 
-# Full Authentication Flow
+## ✨ Full Authentication Flow diagram 
 
-1. Login Flow
+### 🔑 1. Login Flow
 
-![Project Architecture](images/LoginFlow.png)
+![Login Flow](images/LoginFlow.png)
 
-```
-# sequenceDiagram
+### 📈 2. Sequence Diagram
+
+```mermaid
+ sequenceDiagram
     Client->>+Server: POST /login {email, password}
     Server->>+DB: Verify credentials
     DB-->>-Server: User data
