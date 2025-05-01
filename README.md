@@ -26,7 +26,7 @@ A secure and robust authentication system built using **Java**, **Spring Boot**,
 🧂 Password Encryption using BCrypt  
 📄 Swagger API Docs  
 🗃 MongoDB for User Storage  
-🚫 Custom Exception Handling
+🚫 Custom Exception Handling   
 🛡️ Password Encryption (BCrypt)
 
 ---
