@@ -235,7 +235,7 @@ sequenceDiagram
     🖥️ Server-->>-👤 Client: Protected data
 ```
 
-![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow(when accessToken expires).png)
+![RefreshTokenFlow(when accessToken expires)](images/RefreshTokenFlow.png)
 
 
 
