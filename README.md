@@ -197,12 +197,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ### 📈 1.1 Sequence Diagram
 
 ```mermaid
- sequenceDiagram
-    Client->>+Server: POST /login {email, password}
-    Server->>+DB: Verify credentials
-    DB-->>-Server: User data
-    Server->>Server: Generate tokens
-    Server-->>-Client: {accessToken, refreshToken}
+sequenceDiagram
+    👤 Client->>+🖥️ Server: POST /login {email, password}
+    🖥️ Server->>+🗄️ DB: Verify credentials
+    🗄️ DB-->>-🖥️ Server: User data
+    🖥️ Server->>🖥️ Server: Generate tokens
+    🖥️ Server-->>-👤 Client: {accessToken, refreshToken}
 ```
 
 
