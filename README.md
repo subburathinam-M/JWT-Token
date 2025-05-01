@@ -194,7 +194,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 ![Login Flow](images/LoginFlow.png)
 
-### 📈 2. Sequence Diagram
+### 📈 1.1 Sequence Diagram
 
 ```mermaid
  sequenceDiagram
@@ -225,6 +225,15 @@ sequenceDiagram
 ### 🔐2. Access Token Usage Flow
 
 ![Access Token Usage](images/AccessTokenUsage.png)
+
+### 📈 2.1 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    👨‍💻 Client->>+🛡️ Server: GET /protected (🔑 Bearer accessToken)
+    🛡️ Server->>🧠 Server: 🧾 Validate JWT
+    🛡️ Server-->>-👨‍💻 Client: 📦 Protected data
+```
 
 
 
