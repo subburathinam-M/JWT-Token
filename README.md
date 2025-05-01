@@ -205,6 +205,10 @@ mvn dependency:tree
 ```
 ---
 
+# flow diagram 
+
+![Project Architecture](images/Login Flow.png)
+
 # 🤝 Contributing
 
 1.Fork the project
